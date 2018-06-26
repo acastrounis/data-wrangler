@@ -1,14 +1,20 @@
+import sys
 from setuptools import setup
+from distutils.core import setup
+
+DISTNAME = 'wranglyzer'
 
 setup(
-    name='wranglyzer',
+    name=DISTNAME,
     url='https://github.com/acastrounis/wranglyzer',
     author='Alex Castrounis',
-    packages=['wranglyzer'],
+    packages=['wranglyzer', 'wranglyzer.*'],
     install_requires=['numpy'], # TODO: Fill in
     version='0.1',
     license='MIT',
-    description='An example of a python package from pre-existing code',
+    description='A python package for routine data wrangling and EDA tasks',
     long_description=open('README.txt').read(),
-    scripts = [''] # ['scripts/hello.py']
+    scripts = [''], # ['scripts/hello.py']
+    python_requires='>=3.6.*',
+    **setuptools_kwargs
 )
