@@ -7,7 +7,9 @@
 # if module_path not in sys.path:
 #     sys.path.append(module_path)
 
-from config import *
-from converters import *
-from eda.stats import *
-from eda.viz import *
+### Import statements
+# import wranglyzer
+# import wranglyzer.config.api
+# import wranglyzer.converters.api
+# import wranglyzer.eda.viz.api
+# import wranglyzer.eda.stats.api

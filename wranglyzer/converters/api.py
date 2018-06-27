@@ -1,4 +1,5 @@
-print("converters.py")
+def debug(x):
+    print(x)
 
 # Converters
 
