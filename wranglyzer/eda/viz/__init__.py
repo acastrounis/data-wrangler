@@ -1,1 +1,1 @@
-# print("Imported eda.viz.py")
+print("Importing EDA viz api")

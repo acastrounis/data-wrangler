@@ -13,3 +13,5 @@
 # import wranglyzer.converters.api
 # import wranglyzer.eda.viz.api
 # import wranglyzer.eda.stats.api
+
+print("Importing wranglyzer")
