@@ -18,7 +18,7 @@ setuptools.setup(
     description='A python package for routine data wrangling and EDA tasks',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    scripts = [''],
+    # scripts = [''],
     python_requires='>=3.6.*',
     classifiers=(
         "Programming Language :: Python :: 3",
