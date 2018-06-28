@@ -1,20 +1,28 @@
-import sys
-from setuptools import setup
-from distutils.core import setup
+# https://test.pypi.org/project/wranglyzer/
 
-DISTNAME = 'wranglyzer'
+import setuptools
 
-setup(
-    name=DISTNAME,
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name='wranglyzer',
     url='https://github.com/acastrounis/wranglyzer',
     author='Alex Castrounis',
-    packages=['wranglyzer', 'wranglyzer.*'],
-    install_requires=['numpy'], # TODO: Fill in
-    version='0.1',
+    author_email='dev@innoarchitech.com',
+    # packages=['wranglyzer', 'wranglyzer.*'],
+    packages=setuptools.find_packages(),
+    # install_requires=['numpy', 'pandas'], # TODO: Fill in
+    version='0.0.1.dev0',
     license='MIT',
     description='A python package for routine data wrangling and EDA tasks',
-    long_description=open('README.txt').read(),
-    scripts = [''], # ['scripts/hello.py']
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    scripts = [''],
     python_requires='>=3.6.*',
-    **setuptools_kwargs
+    classifiers=(
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ),
 )
