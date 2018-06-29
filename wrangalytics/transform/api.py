@@ -1,8 +1,6 @@
 def debug(x):
     print(x)
 
-# Converters
-
 def percent2float(x):
     return float(x.strip('%'))/100
 

@@ -3,7 +3,7 @@ name = "wrangalytics"
 ### Import statements
 # import wrangalytics
 # import wrangalytics.config.api
-# import wrangalytics.converters.api
+# import wrangalytics.transform.api
 # import wrangalytics.eda.viz.api
 # import wrangalytics.eda.stats.api
 
@@ -27,8 +27,8 @@ name = "wrangalytics"
 # import wrangalytics
 # from wrangalytics.config import api as config
 
-# from wrangalytics.converters.api import percent2float as p2f
-# from wrangalytics.converters.api import str2float as s2f
-# from wrangalytics.converters.api import str2int as s2i
+# from wrangalytics.transform.api import percent2float as p2f
+# from wrangalytics.transform.api import str2float as s2f
+# from wrangalytics.transform.api import str2int as s2i
 
 # from imp import reload
