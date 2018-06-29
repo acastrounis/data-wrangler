@@ -1,2 +1,2 @@
-name = "wranglyzer.eda.viz"
+name = "wrangalytics.eda.viz"
 print("Importing EDA viz api")

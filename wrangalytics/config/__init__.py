@@ -1,2 +1,2 @@
-name = "wranglyzer.config"
+name = "wrangalytics.config"
 print("Importing config api")

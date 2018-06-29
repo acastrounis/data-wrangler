@@ -1,2 +1,2 @@
-name = "wranglyzer.converters"
+name = "wrangalytics.converters"
 print("Importing converters api")

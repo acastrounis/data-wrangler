@@ -1,4 +1,4 @@
-# https://test.pypi.org/project/wranglyzer/
+# https://test.pypi.org/project/wrangalytics/
 
 import setuptools
 
@@ -6,14 +6,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='wranglyzer',
-    url='https://github.com/acastrounis/wranglyzer',
+    name='wrangalytics',
+    url='https://github.com/acastrounis/wrangalytics',
     author='Alex Castrounis',
     author_email='dev@innoarchitech.com',
-    packages=['wranglyzer'],
+    packages=['wrangalytics'],
     # packages=setuptools.find_packages(),
     # install_requires=['numpy', 'pandas'], # TODO: Fill in
-    version='0.0.2.dev0',
+    version='0.0.1.dev0',
     license='MIT',
     description='A python package for routine data wrangling and analytics tasks',
     long_description=long_description,
