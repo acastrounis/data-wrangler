@@ -1,5 +1,5 @@
 # wranglyzer
 
-A python package for routine data wrangling and EDA tasks
+A python package for routine data wrangling and analytics tasks
 
 More on its way...
