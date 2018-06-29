@@ -9,26 +9,26 @@ name = "wrangalytics"
 
 ### Import base functions
 
-from IPython.display import display
+# from IPython.display import display
 
-import numpy as np
-import pandas as pd
+# import numpy as np
+# import pandas as pd
 
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
-import statsmodels.api as sm
-import statsmodels.formula.api as smf
+# import statsmodels.api as sm
+# import statsmodels.formula.api as smf
 
-import scipy
-from scipy import stats
+# import scipy
+# from scipy import stats
 
-import sklearn
+# import sklearn
 
 # import wrangalytics
 # from wrangalytics.config import api as config
 
-from wrangalytics.converters.api import percent2float as p2f
-from wrangalytics.converters.api import str2float as s2f
-from wrangalytics.converters.api import str2int as s2i
+# from wrangalytics.converters.api import percent2float as p2f
+# from wrangalytics.converters.api import str2float as s2f
+# from wrangalytics.converters.api import str2int as s2i
 
-from imp import reload
+# from imp import reload
