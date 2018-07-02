@@ -12,3 +12,19 @@ def displayColumnIndex(df):
 
 def displayUniqueVals(series):
     display(series.name, series.unique())
+
+def displayIndexes(df):
+    display(df.index)
+    display(df.columns)
+
+def featureCardinality(df):
+    df.apply(pd.Series.nunique)
+
+def analyzeMissingValues(df):
+    return True
+
+def analyzeCardinality(df):
+    return True
+
+def analyzeOutliers(df):
+    return True
