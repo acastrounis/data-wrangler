@@ -1,6 +1,8 @@
 def debug(x):
     print(x)
 
+### Conversions
+
 def percent2float(x):
     """
     Convert percent to float
@@ -46,6 +48,8 @@ def cont2cat(series):
     - Equal-frequency
     """
 
+### Mapping
+
 def remapColVals(series, map):
     """
     Map series values to values defined in map
@@ -55,6 +59,8 @@ def remapColVals(series, map):
     - This function should be used to map categorical values to a standard set of levels
     """
     series.replace(map, inplace=True)
+
+### Missing Values
 
 def handleMissingValues():
     # TODO: Remove feature if >60% missing values
@@ -81,6 +87,8 @@ def handleCardinality():
     # TODO: Remove feature if cardinality is equal to 1
     return True
 
+### Outliers
+
 def handleOutliers():
     """
     Handle features with outliers
@@ -99,6 +107,8 @@ def handleOutliers():
         - Upper threshold: 3rd quartile plus 1.5 times the IQR
     """
     return True
+
+### Standardization and Normalization
 
 def standardizeSeries(series):
      """
