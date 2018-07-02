@@ -54,7 +54,7 @@ def displayDfFeatureCardinality(df):
     - Watch out for cardinality equal to 1 or greater than 50
     - Remove feature if cardinality is equal to 1 since no predictive power
     """
-    df.apply(pd.Series.nunique)
+    display(df.apply(pd.Series.nunique))
 
 def getFeatureCardinality(series, show=True):
     card = series.nunique
