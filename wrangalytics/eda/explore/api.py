@@ -18,6 +18,15 @@ def displayIndexes(df):
     display(df.columns)
 
 def featureCardinality(df):
+    """
+    Check cardinality for each feature
+
+    Notes 
+    ------
+    - Ensure cardinality makes sense for both continuous and categorical features
+    - Watch out for cardinality equal to 1 or greater than 50
+    - Remove feature if cardinality is equal to 1 since no predictive power
+    """
     df.apply(pd.Series.nunique)
 
 def analyzeMissingValues(df):
