@@ -1,33 +1,33 @@
 def debug(x):
     print(x)
 
-def getStringColumns(df, display=True):
+def getStringColumns(df, show=True):
     df = df.select_dtypes(include='object')
-    if display:
+    if show:
         display(df)
     return df
 
-def columnNamesByType(df, type='object', display=True):
+def columnNamesByType(df, type='object', show=True):
     colNames = df.select_dtypes(include=type).columns.values
-    if display:
+    if show:
         display(colNames)
     return colNames
 
-def getRowIndex(df, display=True):
+def getRowIndex(df, show=True):
     idx = df.index
-    if display:
+    if show:
         display(df.index)
     return idx
 
-def getColumnIndex(df, display=True):
+def getColumnIndex(df, show=True):
     idx = df.index
-    if display:
+    if show:
         display(df.columns)
     return idx
 
-def getUniqueValsBySeries(series, display=True):
+def getUniqueValsBySeries(series, show=True):
     unique = series.unique()
-    if display:
+    if show:
         display(series.name, unique)
     return unique
 
@@ -35,11 +35,11 @@ def displayUniqueValsByListSeries(list):
     for col in list:
         display(col, df[col].unique())
 
-def getIndexes(df, display=True):
+def getIndexes(df, show=True):
     d = dict();
     d['row_idx'] = df.index
     d['col_idx'] = df.columns
-    if display:
+    if show:
         display(d['row_idx'])
         display(d['col_idx'])
     return d
@@ -56,9 +56,9 @@ def displayDfFeatureCardinality(df):
     """
     df.apply(pd.Series.nunique)
 
-def getFeatureCardinality(series, display=True):
+def getFeatureCardinality(series, show=True):
     card = series.nunique
-    if display:
+    if show:
         display(card)
     return card
 
@@ -71,21 +71,21 @@ def analyzeCardinality(df):
 def analyzeOutliers(df):
     return True
 
-def getType(x, display=True):
+def getType(x, show=True):
     # Use 'is a' syntax to return boolean
     input_type = type(x)
-    if display:
+    if show:
         display(input_type)
     return input_type
 
-def getDfType(df, display=True):
+def getDfType(df, show=True):
     df_types = df.dtypes
-    if display:
+    if show:
         display(df_types)
     return df_types
 
-def getSeriesType(series, display=True):
+def getSeriesType(series, show=True):
     s_type = series.dtype
-    if display:
+    if show:
         display(s_type)
     return  s_type
