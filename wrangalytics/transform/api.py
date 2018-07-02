@@ -19,13 +19,21 @@ def str2int(x):
     """
     return int(str(x))
 
-def str2cat(series):
+def series2cat(series):
     """
-    Convert string feature to categorical
+    Convert string feature series to categorical
     """
 
     series = series.astype('category')
     return series
+
+def seriesList2cat(list):
+    """
+    Convert series list to categorical
+    """
+    for series in list:
+        df[series] = df[series].astype('category')
+        display(df[series].dtype)
 
 def cont2cat(series):
     """
