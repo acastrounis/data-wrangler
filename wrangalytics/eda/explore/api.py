@@ -66,6 +66,10 @@ def getFeatureCardinality(series, show=True):
         display(card)
     return card
 
+def analyzeTypes(df):
+    getDfTypeCounts(df)
+    getDfColTypes(df)
+
 def analyzeMissingValues(df):
     return True
 
@@ -82,11 +86,17 @@ def getType(x, show=True):
         display(input_type)
     return input_type
 
-def getDfType(df, show=True):
+def getDfColTypes(df, show=True):
     df_types = df.dtypes
     if show:
         display(df_types)
     return df_types
+
+def getDfTypeCounts(df, show=True):
+    df_type_cnts = df.get_dtype_counts()
+    if show:
+        display(df_type_cnts)
+    return df_type_cnts
 
 def getSeriesType(series, show=True):
     s_type = series.dtype

@@ -20,3 +20,7 @@ def analyzeDfCovarianceAndCorrelation(df):
     - Correlation is normalized in range -1 to 1, with -1 indicating a very strong negative correlation and vice versa. 0 indicates no correlation (independent).
     - Correlation does not necessarily imply causation, and often other hidden related features are not accounted for (confounding)
     """
+
+def summarizeDataFrame(df):
+    display(df.describe(include='all'))
+    display(df.info())
