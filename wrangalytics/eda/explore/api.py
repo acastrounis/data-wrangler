@@ -1,30 +1,50 @@
 def debug(x):
     print(x)
 
-def findStringColumns(df):
-    display(df.select_dtypes(include='object'))
+def getStringColumns(df, display=True):
+    df = df.select_dtypes(include='object')
+    if display:
+        display(df)
+    return df
 
-def columnNamesByType(df, type='object'):
-    df.select_dtypes(include=type).columns.values
+def columnNamesByType(df, type='object', display=True):
+    colNames = df.select_dtypes(include=type).columns.values
+    if display:
+        display(colNames)
+    return colNames
 
-def displayRowIndex(df):
-    display(df.index)
+def getRowIndex(df, display=True):
+    idx = df.index
+    if display:
+        display(df.index)
+    return idx
 
-def displayColumnIndex(df):
-    display(df.columns)
+def getColumnIndex(df, display=True):
+    idx = df.index
+    if display:
+        display(df.columns)
+    return idx
 
-def displayUniqueValsBySeries(series):
-    display(series.name, series.unique())
+def getUniqueValsBySeries(series, display=True):
+    unique = series.unique()
+    if display:
+        display(series.name, unique)
+    return unique
 
 def displayUniqueValsByListSeries(list):
     for col in list:
         display(col, df[col].unique())
 
-def displayIndexes(df):
-    display(df.index)
-    display(df.columns)
+def getIndexes(df, display=True):
+    d = dict();
+    d['row_idx'] = df.index
+    d['col_idx'] = df.columns
+    if display:
+        display(d['row_idx'])
+        display(d['col_idx'])
+    return d
 
-def featureCardinality(df):
+def displayDfFeatureCardinality(df):
     """
     Check cardinality for each feature
 
@@ -36,6 +56,12 @@ def featureCardinality(df):
     """
     df.apply(pd.Series.nunique)
 
+def getFeatureCardinality(series, display=True):
+    card = series.nunique
+    if display:
+        display(card)
+    return card
+
 def analyzeMissingValues(df):
     return True
 
@@ -45,12 +71,21 @@ def analyzeCardinality(df):
 def analyzeOutliers(df):
     return True
 
-def checkType(x):
+def getType(x, display=True):
     # Use 'is a' syntax to return boolean
-    return type(x)
+    input_type = type(x)
+    if display:
+        display(input_type)
+    return input_type
 
-def checkDfType(df):
-    df.dtypes
+def getDfType(df, display=True):
+    df_types = df.dtypes
+    if display:
+        display(df_types)
+    return df_types
 
-def checkSeriesType(series):
-    series.dtype
+def getSeriesType(series, display=True):
+    s_type = series.dtype
+    if display:
+        display(s_type)
+    return  s_type
