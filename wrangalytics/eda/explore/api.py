@@ -31,7 +31,7 @@ def getUniqueValsBySeries(series, show=True):
         display(series.name, unique)
     return unique
 
-def displayUniqueValsByListSeries(list):
+def displayUniqueValsByListSeries(df, list):
     for col in list:
         display(col, df[col].unique())
 
