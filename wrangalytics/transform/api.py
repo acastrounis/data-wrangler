@@ -27,7 +27,7 @@ def series2cat(series):
     series = series.astype('category')
     return series
 
-def seriesList2cat(list):
+def seriesList2cat(df, list):
     """
     Convert series list to categorical
     """
