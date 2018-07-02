@@ -19,11 +19,24 @@ def str2int(x):
     """
     return int(str(x))
 
-def series2cat(series):
+def str2cat(series):
     """
-    Convert continous feature to categorical
+    Convert string feature to categorical
     """
-    # return series = series.astype('category')
+
+    series = series.astype('category')
+    return series
+
+def cont2cat(series):
+    """
+    Convert continous feature to categorical (aka binning)
+
+    Notes
+    -----
+    Binning Methods
+    - Equal-width
+    - Equal-frequency
+    """
 
 def remapColVals(series, map):
     """
@@ -78,3 +91,14 @@ def handleOutliers():
         - Upper threshold: 3rd quartile plus 1.5 times the IQR
     """
     return True
+
+def standardizeSeries(series):
+     """
+    Standardize series values
+
+    Notes
+    -----
+    Standardization and normalization methods
+    - Range normalization
+    - Standard scores (assumes normal distribution): (x - x_mean)/x_std_dev
+    """
