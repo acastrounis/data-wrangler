@@ -23,7 +23,7 @@ def series2cat(series):
     """
     Convert continous feature to categorical
     """
-    return series = series.astype('category')
+    # return series = series.astype('category')
 
 def remapColVals(series, map):
     """
