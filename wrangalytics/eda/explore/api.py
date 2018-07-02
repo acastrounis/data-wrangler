@@ -4,7 +4,7 @@ def debug(x):
 def findStringColumns(df):
     display(df.select_dtypes(include='object'))
 
-def displayColumnNamesByType(df, type='object'):
+def columnNamesByType(df, type='object'):
     df.select_dtypes(include=type).columns.values
 
 def displayRowIndex(df):
