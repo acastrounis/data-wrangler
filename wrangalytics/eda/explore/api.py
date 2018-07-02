@@ -44,9 +44,13 @@ def getIndexes(df, show=True):
         display(d['col_idx'])
     return d
 
-def displayDfFeatureCardinality(df):
+def displayDfFeatureCardinality(df, func):
     """
     Check cardinality for each feature
+
+    Args
+    -----
+    - Pandas func: pd.Series.nunique
 
     Notes 
     ------
@@ -54,8 +58,7 @@ def displayDfFeatureCardinality(df):
     - Watch out for cardinality equal to 1 or greater than 50
     - Remove feature if cardinality is equal to 1 since no predictive power
     """
-    global pd
-    display(df.apply(pd.Series.nunique))
+    display(df.apply(func))
 
 def getFeatureCardinality(series, show=True):
     card = series.nunique
