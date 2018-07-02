@@ -4,14 +4,21 @@ def debug(x):
 def findStringColumns(df):
     display(df.select_dtypes(include='object'))
 
+def displayColumnNamesByType(df, type='object'):
+    df.select_dtypes(include=type).columns.values
+
 def displayRowIndex(df):
     display(df.index)
 
 def displayColumnIndex(df):
     display(df.columns)
 
-def displayUniqueVals(series):
+def displayUniqueValsBySeries(series):
     display(series.name, series.unique())
+
+def displayUniqueValsByListSeries(list):
+    for col in list:
+        display(col, df[col].unique())
 
 def displayIndexes(df):
     display(df.index)
@@ -37,3 +44,13 @@ def analyzeCardinality(df):
 
 def analyzeOutliers(df):
     return True
+
+def checkType(x):
+    # Use 'is a' syntax to return boolean
+    return type(x)
+
+def checkDfType(df):
+    df.dtypes
+
+def checkSeriesType(series):
+    series.dtype
