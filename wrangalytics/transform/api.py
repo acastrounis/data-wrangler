@@ -3,6 +3,8 @@ def debug(x):
 
 ### Conversions
 
+## Use case: converters argument in pandas data read functions (e.g., read_csv)
+
 def percent2float(x):
     """
     Convert percent to float
@@ -25,9 +27,7 @@ def series2cat(series):
     """
     Convert string feature series to categorical
     """
-
-    series = series.astype('category')
-    return series
+    return series.astype('category')
 
 def seriesList2cat(df, list):
     """
@@ -59,6 +59,11 @@ def remapColVals(series, map):
     - This function should be used to map categorical values to a standard set of levels
     """
     series.replace(map, inplace=True)
+
+### Wrangling
+
+def dropColsByList(df, list):
+    df.drop(columns=list, inplace=True)
 
 ### Missing Values
 
