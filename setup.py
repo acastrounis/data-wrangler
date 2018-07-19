@@ -13,7 +13,7 @@ setuptools.setup(
     packages=['wrangalytics'],
     # packages=setuptools.find_packages(),
     # install_requires=['numpy', 'pandas'], # TODO: Fill in
-    version='0.0.1.dev0',
+    version='0.0.2.dev0',
     license='MIT',
     description='A python package for routine data wrangling and analytics tasks',
     long_description=long_description,
