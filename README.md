@@ -22,6 +22,24 @@ PIP: pip install --upgrade wrangalytics
 
 From Conda: conda update -c alexcastrounis wrangalytics
 
+## Importing
+
+**Top-level package**
+
+import wrangalytics as <alias>
+
+**Subpackage**
+
+import wrangalytics.<subpackageName> as <alias>
+
+OR
+
+from wrangalytics.<subpackageName> import api as <alias>
+
+**Module APIs**
+
+from wrangalytics.<subpackageName>.api import <apiName> as <alias>
+
 ## Documentation
 
 This package does not have accompanying API documentation yet.
