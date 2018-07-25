@@ -13,6 +13,13 @@ def columnNamesByType(df, type='object', show=True):
         display(colNames)
     return colNames
 
+def getUniqueColValuesByType(df, type='object', show=True):
+    colNames = df.select_dtypes(include=type).columns.values
+    if show:
+        for col in colNames:
+            display(col, df[col].unique())
+    return colNames
+
 def getRowIndex(df, show=True):
     idx = df.index
     if show:
@@ -104,6 +111,12 @@ def getType(x, show=True):
     if show:
         display(input_type)
     return input_type
+
+def getSeriesTypeName(series, show=True):
+    name = series.dtype.name
+    if show:
+        display(name)
+    return name
 
 def getDfColTypes(df, show=True):
     df_types = df.dtypes

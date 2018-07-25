@@ -3,7 +3,7 @@ def debug(x):
 
 ### Conversions
 
-## Use case: converters argument in pandas data read functions (e.g., read_csv)
+## Use case: converters argument in pandas data read functions (e.g., read_csv). Use dtypes argument for converting string to category.
 
 def percent2float(x):
     """
@@ -22,6 +22,12 @@ def str2int(x):
     Convert string to integer
     """
     return int(str(x))
+
+def str2datetime(x):
+    """
+    Convert string to datetime
+    """
+    return pd.to_datetime
 
 def series2cat(series):
     """
@@ -53,6 +59,15 @@ def cont2cat(series):
 def remapColVals(series, map):
     """
     Map series values to values defined in map
+
+    EX:
+
+    map = {
+        "itemName1": "newItemName1",
+        "itemName2": "newItemName2",
+        ...
+        "itemNameN": "newItemNameN",
+    }
 
     Notes
     -----
@@ -105,8 +120,8 @@ def handleOutliers():
     Notes
     -----
     Outlier Threshold Methods
-    - Feature min and max combined with domain expertise
-    - Upper and lower set to mean value plus or minus 2 times the std dev (assumes underlying normal distribution)
+    - Feature min and max combined with domain expertise (e.g., 0.5/0.95 rule)
+    - Upper and lower set to mean value plus or minus 2 times the std dev (assumes underlying normal distribution, and could be a diff. multiple)
     - Clamp transformation (only apply if suspected model performing poorly due to outliers)
         - Lower threshold: 1st quartile minus 1.5 times the IQR
         - Upper threshold: 3rd quartile plus 1.5 times the IQR
