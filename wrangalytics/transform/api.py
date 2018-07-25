@@ -76,6 +76,15 @@ def remapColVals(series, map):
     series.replace(map, inplace=True)
 
 ### Wrangling
+def dropColsContainingOneUniqueVal(df):
+    num_unique_vals_by_col = df.nunique()
+    cols_to_drop_unique = []
+    for i, v in num_unique_vals_by_col.items():
+        if v == 1:
+            print('index: ', i, 'value: ', v)
+            cols_to_drop_unique.append(i)
+    df.drop(columns=cols_to_drop_unique, inplace=True)
+    return cols_to_drop_unique
 
 def dropColsByList(df, list):
     df.drop(columns=list, inplace=True)
@@ -85,6 +94,15 @@ def dropColsByList(df, list):
 def handleMissingValues():
     # TODO: Remove feature if >60% missing values
     return True
+
+def removeMissingValues(df, inplace=True):
+    df.dropna(inplace=inplace, how='all')
+    df.dropna(inplace=inplace)
+
+def removeSubsetMissingValues(df, subset, inplace=True):
+    # EX: subset=['colName1', 'colName2']
+    df.dropna(inplace=inplace, how='all')
+    df.dropna(inplace=inplace, subset=subset)
 
 def imputeMissingValues():
     """
