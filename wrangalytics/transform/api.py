@@ -86,6 +86,16 @@ def dropColsContainingOneUniqueVal(df):
     df.drop(columns=cols_to_drop_unique, inplace=True)
     return cols_to_drop_unique
 
+def dropColsExceedingMissingThreshold(df, threshold=0.60):
+    missing_val_ratios = df.isnull().sum()/df.shape[0]
+    missing_val_ratios_thresh = missing_val_ratios[missing_val_ratios > threshold]
+    cols_to_drop_mv = []
+    for i, v in missing_val_ratios_thresh.items():
+        print('index: ', i, 'value: ', v)
+        cols_to_drop_mv.append(i)
+    df.drop(columns=cols_to_drop_mv, inplace=True)
+    return cols_to_drop_mv
+
 def dropColsByList(df, list):
     df.drop(columns=list, inplace=True)
 
