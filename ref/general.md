@@ -41,7 +41,7 @@ Note: APIs given for pandas and scikit-learn
     + Filtered df
         * Rows with missing values: df[df.isnull().any(axis=1)]
         * Number of rows with missing values: df[df.isnull().any(axis=1)].shape
-- Clean data
+- Handle missing values
     + CLI
         * isnull()
         * notnull()
@@ -53,7 +53,6 @@ Note: APIs given for pandas and scikit-learn
         * df.dropna()
     + Impute and/or replace missing values
         * scikit-learn: Imputer()
-    + Remove outliers
 - Save cleaned data as separate dataset
 - Initial EDA
     + df.describe() OR df.describe(include='all')
@@ -84,11 +83,17 @@ Note: APIs given for pandas and scikit-learn
         * PolynomialFeatures # Get features high-order and interaction terms
     + Custom transformations
         * FunctionTransformer # Convert an existing Python function into a transformer to assist in data cleaning or processing
+    + Target/label transformation
+        * LabelBinarizer # Create a label indicator matrix from a list of multi-class labels
+        * MultiLabelBinarizer # For multiple labels per instance
+        * LabelEncoder# Help normalize labels such that they contain only values between 0 and n_classes-1, OR transform non-numerical labels (as long as they are hashable and comparable) to numerical labels
 - Feature engineering
     + Convert text to numeric values where needed
     + Encode other data types, e.g., images
     + Create aggregation features
     + Create new calculated features
+- Free-form text
+    + Remove free form text from dataset unless performing text analytics, NL*, etc.
 - Save cleaned and transformed data as separate dataset
 - Perform analytics tasks!
     + Descriptive, predictive, prescriptive, and advanced
